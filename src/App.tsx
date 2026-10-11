@@ -35,7 +35,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-slate-50 text-slate-800 selection:bg-[#1dbcb5]/25 selection:text-[#0c6b66] font-body">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-slate-50 text-slate-800 selection:bg-[#1dbcb5]/25 selection:text-[#0c6b66] font-body">
       {/* Top Cyan Scroll Progress Indicator */}
       <ScrollProgressBar />
 
@@ -46,7 +46,7 @@ export const App: React.FC = () => {
       <Navbar onOpenConsultation={() => handleOpenConsultation()} />
 
       {/* Main Content Flow */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {/* Hero Section */}
         <HeroSection
           onOpenConsultation={() => handleOpenConsultation()}

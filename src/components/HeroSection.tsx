@@ -25,7 +25,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       dotRadius={1.2}
       headRadius={70}
       glowRadius={260}
-      className="min-h-[90vh] w-full flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12 font-body"
+      className="min-h-[90vh] w-full max-w-full flex items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 md:px-8 lg:px-12 font-body overflow-hidden"
     >
       {/* Soft Ambient Mint/Cyan Glow in Background matching reference */}
       <div className="absolute top-1/3 -left-20 w-[600px] h-[600px] bg-[#1dbcb5]/22 rounded-full blur-[140px] pointer-events-none" />

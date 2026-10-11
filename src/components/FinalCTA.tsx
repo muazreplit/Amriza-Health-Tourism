@@ -9,7 +9,7 @@ interface FinalCTAProps {
 
 export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
   return (
-    <section id="contact" className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto flex items-center justify-center font-body">
+    <section id="contact" className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto flex items-center justify-center font-body overflow-hidden">
       {/* Background Soft Glow matching reference */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#1dbcb5]/12 rounded-full blur-[140px] pointer-events-none" />
 

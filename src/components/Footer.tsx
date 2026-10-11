@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative py-8 sm:py-12 px-4 md:px-8 font-body">
+    <footer className="relative py-8 sm:py-12 px-4 md:px-8 font-body overflow-hidden">
       {/* Centered Floating White/Frosted Glass Squircle Card */}
       <div className="max-w-6xl mx-auto rounded-[28px] sm:rounded-[36px] md:rounded-[44px] bg-white/90 backdrop-blur-xl border border-white/95 shadow-[0_15px_45px_rgba(15,23,42,0.06)] p-6 sm:p-10 md:p-12 relative overflow-hidden">
         {/* Soft Background Accent Glow */}

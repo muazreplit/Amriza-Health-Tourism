@@ -74,7 +74,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
   const currentSpecialty = specialties.find((s) => s.id === activeSpecialtyId) || specialties[0];
 
   return (
-    <section id="specialties" className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto font-body">
+    <section id="specialties" className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto font-body overflow-hidden">
       {/* Background Lighting */}
       <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#1dbcb5]/10 rounded-full blur-[140px] pointer-events-none" />
 

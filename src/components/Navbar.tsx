@@ -33,6 +33,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: 'Why Amriza', href: '#why-amriza', id: 'why-amriza' },
     { name: 'Specialties', href: '#specialties', id: 'specialties' },
@@ -118,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
               <span className="font-bold">WhatsApp</span>
             </a>
 
-            {/* Main Consultation CTA: Bold Liquid Glass Button */}
+            {/* Main Consultation CTA: Bold Liquid Glass Button (Desktop / Tablet only) */}
             <LiquidButton
               size="sm"
               onClick={() => {
@@ -126,21 +137,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-extrabold font-body text-[11px] sm:text-xs tracking-wider uppercase shadow-[0_4px_18px_rgba(20,184,166,0.38)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.55)] cursor-pointer border-none shrink-0"
+              className="hidden md:inline-flex px-5 py-2.5 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-extrabold font-body text-xs tracking-wider uppercase shadow-[0_4px_18px_rgba(20,184,166,0.38)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.55)] cursor-pointer border-none shrink-0"
             >
               <span className="flex items-center gap-1.5 sm:gap-2 font-bold tracking-wide">
-                <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-white" />
+                <Sparkles className="w-3.5 h-3.5 text-white" />
                 <span>START JOURNEY</span>
               </span>
             </LiquidButton>
 
-            {/* Mobile Hamburger Toggle */}
+            {/* Mobile 3-line Hamburger Toggle Button */}
             <button
               onClick={() => {
                 soundFX.playSubtleClick();
                 setMobileMenuOpen(!mobileMenuOpen);
               }}
-              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white/90 border border-white flex items-center justify-center text-slate-800 shadow-sm cursor-pointer shrink-0"
+              className="lg:hidden w-10 h-10 rounded-2xl bg-white/90 border border-slate-200/80 hover:border-[#14b8a6] flex items-center justify-center text-slate-800 shadow-sm cursor-pointer shrink-0 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5 text-slate-800" /> : <Menu className="w-5 h-5 text-slate-800" />}

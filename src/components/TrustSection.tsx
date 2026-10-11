@@ -10,7 +10,7 @@ interface TrustSectionProps {
 
 export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }) => {
   return (
-    <section id="trust-credibility" className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto font-body">
+    <section id="trust-credibility" className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8 max-w-5xl mx-auto font-body overflow-hidden">
       {/* Background Soft Ambient Glow */}
       <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[600px] bg-[#1dbcb5]/10 rounded-full blur-[150px] pointer-events-none" />
 

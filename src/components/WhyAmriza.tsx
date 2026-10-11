@@ -99,7 +99,7 @@ export const WhyAmriza: React.FC = () => {
   ];
 
   return (
-    <section id="why-amriza" className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto font-body">
+    <section id="why-amriza" className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto font-body overflow-hidden">
       {/* Background Soft Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#1dbcb5]/10 rounded-full blur-[140px] pointer-events-none" />
 

@@ -713,7 +713,7 @@ export default function DottedTrailCursor({
       // Runtime colour when set; theme token otherwise
       style={backgroundColor ? { backgroundColor } : undefined}
       className={cn(
-        "relative w-full overflow-hidden",
+        "relative w-full max-w-full overflow-hidden",
         backgroundColor ? "" : "bg-background",
         className
       )}
@@ -726,7 +726,7 @@ export default function DottedTrailCursor({
       <span aria-hidden="true" hidden style={{ color: PROBE_SENTINEL }}>
         <span ref={probeRef} />
       </span>
-      <div className="relative z-10 w-full">{children}</div>
+      <div className="relative z-10 w-full max-w-full overflow-hidden">{children}</div>
     </div>
   );
 }
