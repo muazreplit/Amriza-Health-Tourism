@@ -34,11 +34,11 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="w-full relative rounded-[32px] sm:rounded-[40px] p-6 sm:p-10 md:p-12 bg-white/85 backdrop-blur-xl border border-white/95 shadow-[0_20px_50px_rgba(13,155,148,0.08)] overflow-hidden font-body z-10"
+        className="w-full relative rounded-[28px] sm:rounded-[40px] p-5 sm:p-10 md:p-12 bg-white/85 backdrop-blur-xl border border-white/95 shadow-[0_20px_50px_rgba(13,155,148,0.08)] overflow-hidden font-body z-10"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 relative z-10">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8 md:gap-12 relative z-10">
           {/* Circular Doctor Portrait */}
-          <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0 shadow-md border-4 border-white bg-slate-100 flex items-center justify-center">
+          <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0 shadow-md border-4 border-white bg-slate-100 flex items-center justify-center">
             <img
               src="/dr-mussadiq.jpg"
               alt="Dr. Mussadiq Ahmed, MD - CEO of Amriza Health Tourism"
@@ -49,12 +49,12 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }
           {/* Profile Details matching exact typography and copy */}
           <div className="flex flex-col text-center md:text-left flex-1 items-center md:items-start">
             {/* Small Uppercase Tag */}
-            <div className="text-[11px] sm:text-xs font-heading uppercase tracking-widest text-[#0d7e79] font-bold mb-1.5">
+            <div className="text-[10px] sm:text-xs font-heading uppercase tracking-widest text-[#0d7e79] font-bold mb-1">
               LEADERSHIP
             </div>
 
             {/* Doctor Name */}
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight font-heading mb-1">
+            <h3 className="text-xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight font-heading mb-1">
               Dr. Mussadiq Ahmed, MD
             </h3>
 

@@ -93,7 +93,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
       </div>
 
       {/* Grid of 8 Specialties */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-8 relative z-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mb-6 sm:mb-8 relative z-10">
         {specialties.map((item) => {
           const isSelected = item.id === activeSpecialtyId;
           return (
@@ -105,15 +105,15 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
                 setActiveSpecialtyId(item.id);
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className={`p-5 rounded-2xl cursor-pointer transition-all duration-200 flex flex-col justify-between ${
+              className={`p-3.5 sm:p-5 rounded-2xl cursor-pointer transition-all duration-200 flex flex-col justify-between ${
                 isSelected
                   ? 'bg-white border-2 border-[#1dbcb5] shadow-[0_8px_25px_rgba(29,188,181,0.22)]'
                   : 'glass-card hover:border-[#1dbcb5]/50'
               }`}
             >
-              <div className="flex items-center justify-between mb-3.5">
+              <div className="flex items-center justify-between mb-2.5 sm:mb-3.5">
                 <div
-                  className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
+                  className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center transition-all ${
                     isSelected
                       ? 'bg-[#1dbcb5]/20 text-[#0d7e79]'
                       : 'bg-[#1dbcb5]/10 text-slate-700'
@@ -126,7 +126,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
                 )}
               </div>
 
-              <h3 className="text-sm sm:text-base font-bold text-slate-900 tracking-tight font-heading">
+              <h3 className="text-xs sm:text-base font-bold text-slate-900 tracking-tight font-heading leading-tight">
                 {item.name}
               </h3>
             </motion.div>
@@ -142,9 +142,9 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.25 }}
-          className="rounded-3xl p-5 sm:p-7 glass-panel border border-[#1dbcb5]/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-5 font-body relative z-10"
+          className="rounded-3xl p-4 sm:p-7 glass-panel border border-[#1dbcb5]/30 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-5 font-body relative z-10"
         >
-          <div className="flex items-center gap-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
             <div className="w-12 h-12 rounded-2xl bg-[#1dbcb5]/15 border border-[#1dbcb5]/35 flex items-center justify-center shrink-0">
               {currentSpecialty.icon}
             </div>
@@ -152,7 +152,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
               <div className="text-[10px] font-heading uppercase tracking-wider text-[#0d7e79] font-bold">
                 Selected Specialty
               </div>
-              <h4 className="text-xl sm:text-2xl font-bold text-slate-900 font-heading">
+              <h4 className="text-lg sm:text-2xl font-bold text-slate-900 font-heading">
                 {currentSpecialty.name}
               </h4>
               <p className="text-slate-600 text-xs sm:text-sm font-body">
@@ -170,7 +170,7 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
             onMouseEnter={() => soundFX.playGlassHover()}
             className="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-[#1dbcb5] to-[#158a85] text-slate-950 font-bold font-body text-xs uppercase tracking-wider shadow-[0_4px_18px_rgba(29,188,181,0.35)] hover:shadow-[0_6px_25px_rgba(29,188,181,0.55)] cursor-pointer border-none shrink-0"
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               <span>Consult for {currentSpecialty.name}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </span>

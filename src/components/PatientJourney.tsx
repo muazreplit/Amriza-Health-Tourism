@@ -190,7 +190,7 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
       </div>
 
       {/* Connected Pathway Stepper */}
-      <div className="mb-10 font-body relative z-10 max-w-5xl mx-auto">
+      <div className="mb-8 sm:mb-10 font-body relative z-10 max-w-5xl mx-auto">
         {/* Horizontal Progress Track for Desktop */}
         <div className="hidden md:block absolute top-7 left-12 right-12 h-0.5 bg-slate-200/80 -z-0">
           <div
@@ -199,7 +199,7 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
           />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-3 relative z-10">
           {stages.map((stage, idx) => {
             const isActive = activeStage === idx;
             const isCompleted = activeStage > idx;
@@ -211,7 +211,7 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
                   setActiveStage(idx);
                 }}
                 onMouseEnter={() => soundFX.playGlassHover()}
-                className={`p-4 rounded-2xl text-left transition-all duration-300 border cursor-pointer relative overflow-hidden group ${
+                className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl text-left transition-all duration-300 border cursor-pointer relative overflow-hidden group ${
                   isActive
                     ? 'bg-white border-[#14b8a6] shadow-[0_8px_30px_rgba(20,184,166,0.18)] scale-[1.02]'
                     : isCompleted
@@ -224,10 +224,10 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#14b8a6] to-[#0d9488]" />
                 )}
 
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2">
+                <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2">
                     <span
-                      className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold font-heading transition-colors ${
+                      className={`w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-[10px] sm:text-[11px] font-bold font-heading transition-colors ${
                         isActive
                           ? 'bg-[#14b8a6] text-white shadow-xs'
                           : isCompleted
@@ -237,16 +237,16 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
                     >
                       {idx + 1}
                     </span>
-                    <span className={`text-[10px] font-heading font-bold uppercase tracking-wider ${isActive ? 'text-[#0d9488]' : 'text-slate-500'}`}>
+                    <span className={`text-[9px] sm:text-[10px] font-heading font-bold uppercase tracking-wider ${isActive ? 'text-[#0d9488]' : 'text-slate-500'}`}>
                       {stage.stageCode}
                     </span>
                   </div>
-                  <span className={`text-[10px] font-heading px-2 py-0.5 rounded-full font-bold ${isActive ? 'bg-[#14b8a6]/15 text-[#0d9488]' : 'text-slate-400 bg-slate-100/80'}`}>
+                  <span className={`text-[9px] sm:text-[10px] font-heading px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${isActive ? 'bg-[#14b8a6]/15 text-[#0d9488]' : 'text-slate-400 bg-slate-100/80'}`}>
                     {stage.progress}
                   </span>
                 </div>
 
-                <div className={`text-xs sm:text-sm font-bold font-heading transition-colors truncate ${isActive ? 'text-slate-900' : 'text-slate-700 group-hover:text-slate-900'}`}>
+                <div className={`text-[10px] sm:text-xs md:text-sm font-bold font-heading transition-colors leading-tight line-clamp-2 min-h-[1.75rem] sm:min-h-0 ${isActive ? 'text-slate-900' : 'text-slate-700 group-hover:text-slate-900'}`}>
                   {stage.title}
                 </div>
               </button>
@@ -281,25 +281,25 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.35, ease: 'easeOut' }}
-              className="w-full bg-white/80 backdrop-blur-xl border border-white/90 rounded-[32px] p-6 sm:p-8 shadow-[0_12px_40px_rgba(15,23,42,0.05)] flex flex-col justify-between font-body relative overflow-hidden"
+              className="w-full bg-white/80 backdrop-blur-xl border border-white/90 rounded-[32px] p-5 sm:p-8 shadow-[0_12px_40px_rgba(15,23,42,0.05)] flex flex-col justify-between font-body relative overflow-hidden"
             >
               {/* Top Section */}
               <div>
-                <div className="flex items-start justify-between pb-5 mb-5 border-b border-slate-200/60">
-                  <div>
+                <div className="flex items-start justify-between pb-4 sm:pb-5 mb-4 sm:mb-5 border-b border-slate-200/60">
+                  <div className="pr-2">
                     <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#14b8a6]/12 border border-[#14b8a6]/25 text-[#0d9488] text-[10px] font-heading font-bold uppercase tracking-wider mb-2">
                       <span>{current.stageCode}</span>
                       <span>·</span>
                       <span>{current.progress} Completed</span>
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+                    <h3 className="text-xl sm:text-3xl font-extrabold text-slate-900 font-heading leading-tight">
                       {current.title}
                     </h3>
-                    <p className="text-slate-600 text-sm mt-1 font-body">{current.subtitle}</p>
+                    <p className="text-slate-600 text-xs sm:text-sm mt-1 font-body">{current.subtitle}</p>
                   </div>
 
                   {/* Stylized Big Stage Number */}
-                  <span className="font-heading text-5xl sm:text-6xl font-extrabold text-[#14b8a6]/25 select-none leading-none -mt-1 -mr-1">
+                  <span className="font-heading text-4xl sm:text-6xl font-extrabold text-[#14b8a6]/25 select-none leading-none -mt-1 -mr-1 shrink-0 ml-2">
                     {current.number}
                   </span>
                 </div>

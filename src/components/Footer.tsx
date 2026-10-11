@@ -1,5 +1,5 @@
 import React from 'react';
-import { PhoneCall, Globe, Mail, Stethoscope, ArrowUp } from 'lucide-react';
+import { PhoneCall, Globe, Mail, Stethoscope, ArrowUp, ArrowUpRight } from 'lucide-react';
 import { soundFX } from '../utils/sound';
 import { LiquidButton } from '@/components/ui/liquid-glass-button';
 
@@ -10,9 +10,9 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative py-12 px-4 md:px-8 font-body">
+    <footer className="relative py-8 sm:py-12 px-4 md:px-8 font-body">
       {/* Centered Floating White/Frosted Glass Squircle Card */}
-      <div className="max-w-6xl mx-auto rounded-[36px] sm:rounded-[44px] bg-white/90 backdrop-blur-xl border border-white/95 shadow-[0_15px_45px_rgba(15,23,42,0.06)] p-8 sm:p-12 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto rounded-[28px] sm:rounded-[36px] md:rounded-[44px] bg-white/90 backdrop-blur-xl border border-white/95 shadow-[0_15px_45px_rgba(15,23,42,0.06)] p-6 sm:p-10 md:p-12 relative overflow-hidden">
         {/* Soft Background Accent Glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-[#1dbcb5]/8 rounded-full blur-[100px] pointer-events-none" />
 
@@ -46,9 +46,10 @@ export const Footer: React.FC = () => {
               Global Care · Trusted Guidance · Healing Beyond Borders — doctor-led health tourism connecting you to world-class care in Chennai, India.
             </p>
 
-            {/* CEO Attribution Badge */}
-            <div className="p-3 rounded-2xl bg-white/80 border border-slate-200/80 flex items-center gap-3 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-[#14b8a6]/12 flex items-center justify-center text-[#0d9488] shrink-0">
+            {/* CEO Attribution Badge with Glass Effect */}
+            <div className="p-3 sm:p-3.5 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/95 shadow-[0_8px_25px_rgba(15,23,42,0.04),inset_0_1.5px_2px_rgba(255,255,255,1)] flex items-center gap-3 relative overflow-hidden group">
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-90" />
+              <div className="w-9 h-9 rounded-xl bg-[#14b8a6]/12 border border-[#14b8a6]/25 flex items-center justify-center text-[#0d9488] shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)]">
                 <Stethoscope className="w-4 h-4 text-[#0d9488]" />
               </div>
               <div className="text-xs">
@@ -101,60 +102,99 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Direct Coordination Directory (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col gap-2.5 font-body">
-            <h4 className="text-[11px] font-heading uppercase tracking-widest text-[#0d9488] font-bold mb-1">
+          {/* Column 3: Direct Coordination Directory (4 cols) with Liquid Glass Cards */}
+          <div className="lg:col-span-4 flex flex-col gap-3 font-body">
+            <h4 className="text-[11px] font-heading uppercase tracking-widest text-[#0d9488] font-bold mb-0.5">
               DIRECT COORDINATION
             </h4>
 
-            {/* WhatsApp */}
+            {/* WhatsApp Glass Card */}
             <a
               href="https://wa.me/919566471448?text=Hello%20Dr.%20Mussadiq%20Ahmed%20and%20Amriza%20Team%2C%20I%20would%20like%20to%20enquire%20about%20medical%20travel%20and%20consultation"
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => soundFX.playGlassHover()}
               onClick={() => soundFX.playSubtleClick()}
-              className="flex items-center gap-3 p-3 rounded-2xl bg-white/80 border border-slate-200/80 hover:border-[#14b8a6] text-slate-800 transition-all text-xs shadow-2xs group"
+              className="relative overflow-hidden flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white/60 hover:bg-white/90 backdrop-blur-xl border border-white/85 hover:border-emerald-500/40 text-slate-800 transition-all duration-300 shadow-[0_4px_20px_rgba(15,23,42,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1px_1px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_28px_rgba(16,185,129,0.16),inset_0_2px_2px_rgba(255,255,255,1)] hover:-translate-y-0.5 group cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              {/* Glass Top Edge Reflection */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-90" />
+              {/* Soft Ambient Inner Glow */}
+              <div className="absolute -top-10 -left-10 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl pointer-events-none group-hover:bg-emerald-500/20 transition-all duration-300" />
+
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-emerald-500/25 group-hover:border-emerald-500/45 transition-all duration-300 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] relative z-10">
                 <PhoneCall className="w-4 h-4" />
               </div>
-              <div>
-                <span className="text-[10px] text-slate-400 block font-heading font-medium">WhatsApp Direct</span>
-                <span className="font-bold text-slate-900 text-xs">+91 95664 71448</span>
+              <div className="flex flex-col relative z-10 min-w-0">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 group-hover:text-emerald-700 transition-colors font-heading font-medium tracking-wide">
+                  WhatsApp Direct
+                </span>
+                <span className="font-bold text-slate-900 text-xs sm:text-sm font-heading tracking-tight">
+                  +91 95664 71448
+                </span>
+              </div>
+              <div className="ml-auto w-6 h-6 rounded-full flex items-center justify-center text-slate-300 group-hover:text-emerald-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 relative z-10">
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </a>
 
-            {/* International Portal */}
+            {/* International Portal Glass Card */}
             <a
               href="https://hsamrizahealthglobal.com"
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => soundFX.playGlassHover()}
               onClick={() => soundFX.playSubtleClick()}
-              className="flex items-center gap-3 p-3 rounded-2xl bg-white/80 border border-slate-200/80 hover:border-[#14b8a6] text-slate-800 transition-all text-xs shadow-2xs group"
+              className="relative overflow-hidden flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white/60 hover:bg-white/90 backdrop-blur-xl border border-white/85 hover:border-[#14b8a6]/40 text-slate-800 transition-all duration-300 shadow-[0_4px_20px_rgba(15,23,42,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1px_1px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_28px_rgba(20,184,166,0.16),inset_0_2px_2px_rgba(255,255,255,1)] hover:-translate-y-0.5 group cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#14b8a6]/10 text-[#0d9488] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              {/* Glass Top Edge Reflection */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-90" />
+              {/* Soft Ambient Inner Glow */}
+              <div className="absolute -top-10 -left-10 w-24 h-24 bg-[#14b8a6]/10 rounded-full blur-xl pointer-events-none group-hover:bg-[#14b8a6]/20 transition-all duration-300" />
+
+              <div className="w-10 h-10 rounded-xl bg-[#14b8a6]/15 border border-[#14b8a6]/30 text-[#0d7e79] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#14b8a6]/25 group-hover:border-[#14b8a6]/45 transition-all duration-300 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] relative z-10">
                 <Globe className="w-4 h-4" />
               </div>
-              <div className="truncate">
-                <span className="text-[10px] text-slate-400 block font-heading font-medium">International Portal</span>
-                <span className="font-bold text-slate-900 text-xs truncate block">hsamrizahealthglobal.com</span>
+              <div className="flex flex-col relative z-10 min-w-0">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 group-hover:text-[#0d7e79] transition-colors font-heading font-medium tracking-wide">
+                  International Portal
+                </span>
+                <span className="font-bold text-slate-900 text-xs sm:text-sm font-heading tracking-tight truncate">
+                  hsamrizahealthglobal.com
+                </span>
+              </div>
+              <div className="ml-auto w-6 h-6 rounded-full flex items-center justify-center text-slate-300 group-hover:text-[#0d7e79] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 relative z-10">
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </a>
 
-            {/* Main Website */}
+            {/* Coordination Portal Glass Card */}
             <a
               href="https://hsamrizahealth.com"
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => soundFX.playGlassHover()}
               onClick={() => soundFX.playSubtleClick()}
-              className="flex items-center gap-3 p-3 rounded-2xl bg-white/80 border border-slate-200/80 hover:border-[#14b8a6] text-slate-800 transition-all text-xs shadow-2xs group"
+              className="relative overflow-hidden flex items-center gap-3.5 p-3 sm:p-3.5 rounded-2xl bg-white/60 hover:bg-white/90 backdrop-blur-xl border border-white/85 hover:border-[#14b8a6]/40 text-slate-800 transition-all duration-300 shadow-[0_4px_20px_rgba(15,23,42,0.03),inset_0_1.5px_2px_rgba(255,255,255,0.95),inset_0_-1px_1px_rgba(0,0,0,0.02)] hover:shadow-[0_10px_28px_rgba(20,184,166,0.16),inset_0_2px_2px_rgba(255,255,255,1)] hover:-translate-y-0.5 group cursor-pointer"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#14b8a6]/10 text-[#0d9488] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              {/* Glass Top Edge Reflection */}
+              <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-90" />
+              {/* Soft Ambient Inner Glow */}
+              <div className="absolute -top-10 -left-10 w-24 h-24 bg-[#14b8a6]/10 rounded-full blur-xl pointer-events-none group-hover:bg-[#14b8a6]/20 transition-all duration-300" />
+
+              <div className="w-10 h-10 rounded-xl bg-[#14b8a6]/15 border border-[#14b8a6]/30 text-[#0d7e79] flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-[#14b8a6]/25 group-hover:border-[#14b8a6]/45 transition-all duration-300 shadow-[inset_0_1px_1px_rgba(255,255,255,0.9)] relative z-10">
                 <Mail className="w-4 h-4" />
               </div>
-              <div className="truncate">
-                <span className="text-[10px] text-slate-400 block font-heading font-medium">Coordination Portal</span>
-                <span className="font-bold text-slate-900 text-xs truncate block">hsamrizahealth.com</span>
+              <div className="flex flex-col relative z-10 min-w-0">
+                <span className="text-[10px] sm:text-[11px] text-slate-500 group-hover:text-[#0d7e79] transition-colors font-heading font-medium tracking-wide">
+                  Coordination Portal
+                </span>
+                <span className="font-bold text-slate-900 text-xs sm:text-sm font-heading tracking-tight truncate">
+                  hsamrizahealth.com
+                </span>
+              </div>
+              <div className="ml-auto w-6 h-6 rounded-full flex items-center justify-center text-slate-300 group-hover:text-[#0d7e79] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 relative z-10">
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </a>
           </div>

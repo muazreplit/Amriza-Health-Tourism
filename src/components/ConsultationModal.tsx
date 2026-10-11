@@ -65,7 +65,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto font-body">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto font-body">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -84,7 +84,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.94, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="relative w-full max-w-2xl rounded-3xl p-6 sm:p-10 bg-white/98 border border-[#1dbcb5]/35 shadow-2xl z-10 my-8 overflow-hidden font-body"
+          className="relative w-full max-w-2xl rounded-[28px] sm:rounded-3xl p-5 sm:p-8 md:p-10 bg-white/98 border border-[#1dbcb5]/35 shadow-2xl z-10 my-auto max-h-[90vh] overflow-y-auto font-body"
           role="dialog"
           aria-modal="true"
         >
@@ -284,10 +284,10 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   href={constructWhatsAppURL()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all font-body"
+                  className="w-full sm:w-72 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all font-body shrink-0"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>FORWARD ON WHATSAPP (9566471448)</span>
+                  <span>FORWARD ON WHATSAPP</span>
                 </a>
 
                 <button
@@ -295,7 +295,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     setSubmitted(false);
                     onClose();
                   }}
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-100 border border-slate-300 text-slate-700 text-xs font-body font-bold uppercase hover:bg-slate-200 transition-colors cursor-pointer"
+                  className="w-full sm:w-72 py-3.5 rounded-xl bg-slate-100 border border-slate-300 text-slate-700 text-xs font-body font-bold uppercase hover:bg-slate-200 transition-colors cursor-pointer flex items-center justify-center shrink-0"
                 >
                   Close Window
                 </button>

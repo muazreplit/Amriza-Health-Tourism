@@ -19,7 +19,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="w-full relative rounded-[32px] sm:rounded-[40px] py-14 sm:py-16 md:py-20 px-6 sm:px-12 md:px-16 text-center text-white overflow-hidden shadow-[0_20px_50px_-10px_rgba(13,155,148,0.35)]"
+        className="w-full relative rounded-[28px] sm:rounded-[40px] py-10 sm:py-16 md:py-20 px-5 sm:px-12 md:px-16 text-center text-white overflow-hidden shadow-[0_20px_50px_-10px_rgba(13,155,148,0.35)]"
         style={{
           background: 'linear-gradient(135deg, #0da39b 0%, #07625d 45%, #0a736d 75%, #12aba4 100%)',
         }}
@@ -30,16 +30,16 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
 
         <div className="relative z-10 max-w-3xl mx-auto">
           {/* Main Title: Space Grotesk */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 font-heading leading-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-3 sm:mb-4 font-heading leading-tight">
             Start Your Healthcare Journey
           </h2>
 
           {/* Subtitle with centered dot separators: DM Sans */}
-          <p className="text-sm sm:text-base md:text-lg text-white/90 font-normal leading-relaxed max-w-2xl mx-auto mb-9 font-body">
+          <p className="text-xs sm:text-base md:text-lg text-white/90 font-normal leading-relaxed max-w-2xl mx-auto mb-7 sm:mb-9 font-body">
             Second opinions · Specialist coordination · Hospital coordination · Treatment assistance · Travel & recovery support.
           </p>
 
-          {/* Dual Action Buttons matching reference */}
+          {/* Dual Action Buttons with Identical Matching Height */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 font-body">
             {/* Left Button: WhatsApp */}
             <a
@@ -48,7 +48,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
               rel="noopener noreferrer"
               onMouseEnter={() => soundFX.playGlassHover()}
               onClick={() => soundFX.playSubtleClick()}
-              className="w-full sm:w-auto px-7 sm:px-8 py-3.5 rounded-full bg-white text-slate-800 hover:bg-slate-50 font-medium text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-200 active:scale-95"
+              className="w-full sm:w-auto px-7 sm:px-8 h-[52px] rounded-full bg-white text-slate-800 hover:bg-slate-50 font-bold text-xs sm:text-base flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 shrink-0"
             >
               {/* WhatsApp Icon */}
               <svg className="w-5 h-5 text-[#25D366] fill-current shrink-0" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
               <span>WhatsApp: +91 95664 71448</span>
             </a>
 
-            {/* Right Button: Contact us Liquid Glass Button */}
+            {/* Right Button: Contact us Liquid Glass Button with matching height */}
             <LiquidButton
               size="lg"
               onClick={() => {
@@ -65,7 +65,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="w-full sm:w-auto px-7 sm:px-8 py-3.5 rounded-full bg-white/15 hover:bg-white/25 text-white font-medium text-sm sm:text-base border border-white/60 hover:border-white cursor-pointer"
+              className="w-full sm:w-auto px-7 sm:px-8 h-[52px] rounded-full bg-white/15 hover:bg-white/25 text-white font-medium text-xs sm:text-base border border-white/60 hover:border-white cursor-pointer flex items-center justify-center shrink-0"
             >
               <span>Contact us</span>
             </LiquidButton>

@@ -126,10 +126,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="px-5 py-2.5 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-extrabold font-body text-xs tracking-wider uppercase shadow-[0_4px_18px_rgba(20,184,166,0.38)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.55)] cursor-pointer border-none"
+              className="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-extrabold font-body text-[11px] sm:text-xs tracking-wider uppercase shadow-[0_4px_18px_rgba(20,184,166,0.38)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.55)] cursor-pointer border-none shrink-0"
             >
-              <span className="flex items-center gap-2 font-bold tracking-wide">
-                <Sparkles className="w-3.5 h-3.5 text-white" />
+              <span className="flex items-center gap-1.5 sm:gap-2 font-bold tracking-wide">
+                <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-white" />
                 <span>START JOURNEY</span>
               </span>
             </LiquidButton>
@@ -140,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                 soundFX.playSubtleClick();
                 setMobileMenuOpen(!mobileMenuOpen);
               }}
-              className="lg:hidden w-10 h-10 rounded-2xl bg-white/90 border border-white flex items-center justify-center text-slate-800 shadow-sm cursor-pointer"
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-white/90 border border-white flex items-center justify-center text-slate-800 shadow-sm cursor-pointer shrink-0"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5 text-slate-800" /> : <Menu className="w-5 h-5 text-slate-800" />}
@@ -151,13 +151,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-30 bg-white/98 backdrop-blur-2xl flex flex-col justify-between pt-24 pb-8 px-6 lg:hidden animate-in fade-in font-body">
-          <div className="flex flex-col gap-4">
-            <div className="pb-4 border-b border-slate-200">
+        <div className="fixed inset-0 z-30 bg-white/98 backdrop-blur-2xl flex flex-col justify-between pt-20 sm:pt-24 pb-8 px-5 sm:px-6 lg:hidden animate-in fade-in font-body overflow-y-auto">
+          <div className="flex flex-col gap-3 sm:gap-4">
+            <div className="pb-3 border-b border-slate-200">
               <span className="text-xs uppercase tracking-widest text-[#0d7e79] font-heading font-bold">
                 AMRIZA HEALTH TOURISM
               </span>
-              <p className="text-sm text-slate-600 mt-1 font-body">
+              <p className="text-xs sm:text-sm text-slate-600 mt-0.5 font-body">
                 Global Care | Trusted Guidance
               </p>
             </div>
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
                   soundFX.playSubtleClick();
                   setMobileMenuOpen(false);
                 }}
-                className="text-lg font-medium text-slate-800 hover:text-[#0d7e79] py-2 border-b border-slate-100 flex items-center justify-between font-body"
+                className="text-base sm:text-lg font-medium text-slate-800 hover:text-[#0d7e79] py-2 border-b border-slate-100 flex items-center justify-between font-body"
               >
                 <span>{link.name}</span>
                 <span className="text-[#0d7e79] text-sm font-bold">→</span>
@@ -177,25 +177,29 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-3 pt-6 border-t border-slate-200">
+          <div className="flex flex-col gap-3 pt-5 border-t border-slate-200">
             <a
               href="https://wa.me/919566471448?text=Hello%20Dr.%20Mussadiq%20Ahmed%20and%20Amriza%20Team%2C%20I%20would%20like%20to%20enquire%20about%20medical%20travel%20and%20consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-3 rounded-xl bg-emerald-50 border border-emerald-500/40 text-emerald-800 flex items-center justify-center gap-2 text-sm font-mono font-semibold"
+              className="w-full py-3.5 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-800 flex items-center justify-center gap-2 text-sm font-body font-bold transition-all shadow-[0_2px_12px_rgba(16,185,129,0.15)] active:scale-95"
             >
               <PhoneCall className="w-4 h-4 text-emerald-600" />
-              <span>WhatsApp: 9566471448</span>
+              <span>Connect on WhatsApp</span>
             </a>
-            <button
+            <LiquidButton
+              size="lg"
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#1dbcb5] to-[#158a85] text-slate-950 font-bold text-sm tracking-wider uppercase font-body shadow-[0_4px_20px_rgba(29,188,181,0.35)]"
+              className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#14b8a6] to-[#0d9488] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase font-body shadow-[0_4px_20px_rgba(20,184,166,0.35)] border-none"
             >
-              START YOUR HEALTHCARE JOURNEY
-            </button>
+              <span className="flex items-center justify-center gap-2">
+                <Sparkles className="w-4 h-4 text-white" />
+                <span>START HEALTHCARE JOURNEY</span>
+              </span>
+            </LiquidButton>
           </div>
         </div>
       )}
