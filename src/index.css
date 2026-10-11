@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Space Grotesk', -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --font-sans: 'DM Sans', -apple-system, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  --color-amriza-cyan: #1dbcb5;
+  --color-cyan-glow: #1dbcb5;
+  --color-cyan-accent: #23d2ca;
+  --color-cyan-dark: #158a85;
+  --color-amriza-navy: #0f172a;
+}
+
+:root {
+  color-scheme: light;
+  --color-cyan: #1dbcb5;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f2f8f7;
+  color: #1e293b;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f8f7;
+  color: #1e293b;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Space Grotesk (400-700) for Headings, Logo Wordmark, and Display Elements */
+h1, h2, h3, h4, h5, h6, .font-heading, .font-display, .brand-wordmark {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* DM Sans (400-700) for Body Copy, Buttons, Navigation Links */
+p, span, a, button, input, select, textarea, label, li, nav, .font-body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Glassmorphism Classes: Liquid Glow Art Style */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 16px 40px -10px rgba(13, 155, 148, 0.08),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0 18px 45px -12px rgba(13, 155, 148, 0.09),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.glass-card:hover {
+  border-color: rgba(29, 188, 181, 0.4);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 24px 50px -12px rgba(29, 188, 181, 0.18),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.02);
+  transform: translateY(-2px);
+}
+
+/* Liquid Curved Button Style */
+.liquid-curved-btn {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 4px 18px rgba(20, 184, 166, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.8),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.liquid-curved-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:
+    0 8px 26px rgba(20, 184, 166, 0.42),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1),
+    inset 0 -1px 1.5px rgba(0, 0, 0, 0.18);
+}
+
+.liquid-curved-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow:
+    0 2px 8px rgba(20, 184, 166, 0.2),
+    inset 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.cyan-glow {
+  box-shadow: 0 0 30px rgba(29, 188, 181, 0.35);
+}
+
+.cyan-glow-subtle {
+  box-shadow: 0 0 18px rgba(29, 188, 181, 0.18);
+}
+
+/* High contrast deep teal-to-cyan gradient on light background */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #0f172a 0%, #0d7e79 45%, #1dbcb5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(180deg, #0f172a 0%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Light Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f8f7;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 188, 181, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 188, 181, 0.7);
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
