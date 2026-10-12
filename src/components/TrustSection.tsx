@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { soundFX } from '../utils/sound';
 import { LiquidButton } from '@/components/ui/liquid-glass-button';
-import drMussadiqImg from '@/assets/dr-mussadiq-v2.jpg';
+import leadershipDoctorImg from '@/assets/dr-mussadiq-leadership.jpg';
 
 interface TrustSectionProps {
   onOpenConsultation: () => void;
@@ -41,7 +41,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }
           {/* Circular Doctor Portrait */}
           <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0 shadow-md border-4 border-white bg-slate-100 flex items-center justify-center">
             <img
-              src={drMussadiqImg}
+              src={leadershipDoctorImg}
               alt="Dr. Mussadiq Ahmed, MD - CEO of Amriza Health Tourism"
               className="w-full h-full object-cover object-[center_15%]"
             />

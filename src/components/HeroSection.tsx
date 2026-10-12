@@ -4,7 +4,7 @@ import { ArrowRight, Heart, Globe, Check } from 'lucide-react';
 import { soundFX } from '../utils/sound';
 import { LiquidButton } from '@/components/ui/liquid-glass-button';
 import DottedTrailCursor from '@/components/ui/dotted-trail-cursor';
-import drMussadiqImg from '@/assets/dr-mussadiq-v2.jpg';
+import heroDoctorImg from '@/assets/hero-doctor.jpg';
 
 interface HeroSectionProps {
   onOpenConsultation: () => void;
@@ -140,9 +140,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="relative rounded-[26px] sm:rounded-[38px] overflow-hidden aspect-[4/5] bg-slate-100 flex items-center justify-center">
               {/* Doctor Image */}
               <img
-                src={drMussadiqImg}
+                src={heroDoctorImg}
                 alt="Dr. Mussadiq Ahmed, MD"
-                className="w-full h-full object-cover object-[center_15%] transform hover:scale-[1.02] transition-transform duration-500"
+                className="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-transform duration-500"
                 loading="eager"
               />
 
