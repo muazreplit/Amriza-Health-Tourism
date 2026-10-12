@@ -19,7 +19,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <DottedTrailCursor
       colorA="#14b8a6"
       colorB="#0d9488"
-      backgroundColor="#f2f8f7"
+      backgroundColor="#f8fafc"
       dotColor="#cbd5e1"
       activeDotColor="#14b8a6"
       dotSpacing={36}
@@ -132,8 +132,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
           className="lg:col-span-6 w-full relative flex items-center justify-center mt-2 sm:mt-0"
         >
-          {/* Subtle Backing Glow */}
-          <div className="absolute -inset-4 bg-[#1dbcb5]/25 rounded-[40px] sm:rounded-[48px] blur-3xl opacity-70 pointer-events-none" />
 
           {/* Main Portrait Frame with Squircle Radius */}
           <div className="w-full max-w-[420px] sm:max-w-[480px] lg:max-w-[520px] relative rounded-[32px] sm:rounded-[44px] overflow-hidden bg-white/70 p-2 sm:p-2.5 border border-white/95 shadow-[0_20px_50px_rgba(13,148,136,0.14)]">
