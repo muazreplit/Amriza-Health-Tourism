@@ -122,25 +122,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
               rel="noopener noreferrer"
               onMouseEnter={() => soundFX.playGlassHover()}
               onClick={() => soundFX.playSubtleClick()}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-800 border border-emerald-500/35 text-xs font-bold font-body transition-all shadow-[0_2px_12px_rgba(16,185,129,0.15),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md"
+              className="hidden sm:inline-flex items-center justify-center gap-2.5 px-6 h-[48px] rounded-full bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-800 border border-emerald-500/35 text-sm font-bold font-body transition-all shadow-[0_2px_12px_rgba(16,185,129,0.15),inset_0_1px_1px_rgba(255,255,255,0.9)] hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md shrink-0"
               title="Connect with Amriza Coordination Desk on WhatsApp"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-emerald-600" />
+              <PhoneCall className="w-4 h-4 text-emerald-600" />
               <span className="font-bold">WhatsApp</span>
             </a>
 
             {/* Main Consultation CTA: Bold Liquid Glass Button (Desktop / Tablet only) */}
             <LiquidButton
-              size="sm"
+              size="lg"
               onClick={() => {
                 soundFX.playSubtleClick();
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="hidden md:inline-flex px-5 py-2.5 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-extrabold font-body text-xs tracking-wider uppercase shadow-[0_4px_18px_rgba(20,184,166,0.38)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.55)] cursor-pointer border-none shrink-0"
+              className="hidden md:inline-flex items-center justify-center px-7 h-[48px] rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold font-body text-sm tracking-wide shadow-[0_4px_18px_rgba(20,184,166,0.38)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.55)] cursor-pointer border-none shrink-0"
             >
-              <span className="flex items-center gap-1.5 sm:gap-2 font-bold tracking-wide">
-                <Sparkles className="w-3.5 h-3.5 text-white" />
+              <span className="flex items-center gap-2 font-semibold tracking-wide">
+                <Sparkles className="w-4 h-4 text-white" />
                 <span>START JOURNEY</span>
               </span>
             </LiquidButton>

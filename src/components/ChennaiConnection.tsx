@@ -152,11 +152,11 @@ export const ChennaiConnection: React.FC<ChennaiConnectionProps> = ({ onOpenCons
               onOpenConsultation();
             }}
             onMouseEnter={() => soundFX.playGlassHover()}
-            className="px-6 py-2.5 rounded-full bg-white border border-[#1dbcb5]/45 hover:border-[#1dbcb5] text-[#0d7e79] hover:bg-slate-50 text-xs font-body font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-xs cursor-pointer"
+            className="h-[50px] px-7 rounded-full bg-white border border-[#1dbcb5]/45 hover:border-[#1dbcb5] text-[#0d7e79] hover:bg-slate-50 text-sm font-body font-semibold tracking-wide transition-all flex items-center gap-2.5 shadow-xs cursor-pointer"
           >
-            <Compass className="w-3.5 h-3.5 text-[#1dbcb5]" />
+            <Compass className="w-4 h-4 text-[#1dbcb5]" />
             <span>Connect with Chennai Clinical Desk</span>
-            <ArrowRight className="w-3 h-3 text-[#0d7e79]" />
+            <ArrowRight className="w-4 h-4 text-[#0d7e79]" />
           </button>
         </div>
       </motion.div>

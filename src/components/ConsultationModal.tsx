@@ -251,7 +251,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   <LiquidButton
                     type="submit"
                     size="lg"
-                    className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-[#1dbcb5] via-[#22cdc5] to-[#158a85] text-slate-950 font-bold font-body text-sm uppercase tracking-wider shadow-[0_4px_20px_rgba(29,188,181,0.35)] hover:shadow-[0_6px_28px_rgba(29,188,181,0.55)] cursor-pointer border-none"
+                    className="w-full h-[50px] rounded-full bg-gradient-to-r from-[#1dbcb5] via-[#22cdc5] to-[#158a85] text-slate-950 font-bold font-body text-sm uppercase tracking-wider shadow-[0_4px_20px_rgba(29,188,181,0.35)] hover:shadow-[0_6px_28px_rgba(29,188,181,0.55)] cursor-pointer border-none flex items-center justify-center"
                   >
                     <span className="flex items-center justify-center gap-2">
                       <FileText className="w-4 h-4 text-slate-950" />

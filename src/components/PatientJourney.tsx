@@ -333,13 +333,13 @@ export const PatientJourney: React.FC<PatientJourneyProps> = ({ onOpenConsultati
                   Physician triage and support coordinated by Amriza
                 </div>
                 <LiquidButton
-                  size="default"
+                  size="lg"
                   onClick={() => {
                     soundFX.playSubtleClick();
                     onOpenConsultation();
                   }}
                   onMouseEnter={() => soundFX.playGlassHover()}
-                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold font-body text-xs uppercase tracking-wider shadow-[0_4px_16px_rgba(20,184,166,0.35)] hover:shadow-[0_6px_22px_rgba(20,184,166,0.5)] cursor-pointer border-none"
+                  className="w-full sm:w-auto h-[50px] px-7 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold font-body text-sm tracking-wide shadow-[0_4px_16px_rgba(20,184,166,0.35)] hover:shadow-[0_6px_22px_rgba(20,184,166,0.5)] cursor-pointer border-none flex items-center justify-center"
                 >
                   <span className="flex items-center gap-2">
                     <span>Start Stage {current.number}</span>

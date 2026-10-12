@@ -48,7 +48,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
               rel="noopener noreferrer"
               onMouseEnter={() => soundFX.playGlassHover()}
               onClick={() => soundFX.playSubtleClick()}
-              className="w-full sm:w-auto px-7 sm:px-8 h-[52px] rounded-full bg-white text-slate-800 hover:bg-slate-50 font-bold text-xs sm:text-base flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 shrink-0"
+              className="w-full sm:w-auto px-7 h-[50px] rounded-full bg-white text-slate-800 hover:bg-slate-50 font-bold text-sm flex items-center justify-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 shrink-0"
             >
               {/* WhatsApp Icon */}
               <svg className="w-5 h-5 text-[#25D366] fill-current shrink-0" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({ onOpenConsultation }) => {
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="w-full sm:w-auto px-7 sm:px-8 h-[52px] rounded-full bg-white/15 hover:bg-white/25 text-white font-medium text-xs sm:text-base border border-white/60 hover:border-white cursor-pointer flex items-center justify-center shrink-0"
+              className="w-full sm:w-auto px-7 h-[50px] rounded-full bg-white/15 hover:bg-white/25 text-white font-semibold text-sm border border-white/60 hover:border-white cursor-pointer flex items-center justify-center shrink-0"
             >
               <span>Contact us</span>
             </LiquidButton>

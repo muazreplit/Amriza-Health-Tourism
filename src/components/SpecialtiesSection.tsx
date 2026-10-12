@@ -162,17 +162,17 @@ export const SpecialtiesSection: React.FC<SpecialtiesSectionProps> = ({ onSelect
           </div>
 
           <LiquidButton
-            size="default"
+            size="lg"
             onClick={() => {
               soundFX.playSubtleClick();
               onSelectSpecialty(currentSpecialty.name);
             }}
             onMouseEnter={() => soundFX.playGlassHover()}
-            className="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-[#1dbcb5] to-[#158a85] text-slate-950 font-bold font-body text-xs uppercase tracking-wider shadow-[0_4px_18px_rgba(29,188,181,0.35)] hover:shadow-[0_6px_25px_rgba(29,188,181,0.55)] cursor-pointer border-none shrink-0"
+            className="w-full sm:w-auto h-[50px] px-7 rounded-full bg-gradient-to-r from-[#1dbcb5] to-[#158a85] text-slate-950 font-bold font-body text-sm tracking-wide shadow-[0_4px_18px_rgba(29,188,181,0.35)] hover:shadow-[0_6px_25px_rgba(29,188,181,0.55)] cursor-pointer border-none shrink-0 flex items-center justify-center"
           >
             <span className="flex items-center justify-center gap-2">
               <span>Consult for {currentSpecialty.name}</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-4 h-4" />
             </span>
           </LiquidButton>
         </motion.div>

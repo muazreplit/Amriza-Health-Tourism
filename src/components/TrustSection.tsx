@@ -40,7 +40,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }
           {/* Circular Doctor Portrait */}
           <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0 shadow-md border-4 border-white bg-slate-100 flex items-center justify-center">
             <img
-              src="/dr-mussadiq-leadership.jpg"
+              src="/dr-mussadiq-v2.jpg"
               alt="Dr. Mussadiq Ahmed, MD - CEO of Amriza Health Tourism"
               className="w-full h-full object-cover object-[center_15%]"
             />
@@ -76,7 +76,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="px-7 py-3.5 rounded-full bg-[#13a8a2] hover:bg-[#0f948f] text-white font-bold text-xs sm:text-sm tracking-wide font-body shadow-[0_4px_18px_rgba(19,168,162,0.3)] hover:shadow-[0_6px_24px_rgba(19,168,162,0.45)] cursor-pointer border-none"
+              className="h-[50px] px-7 rounded-full bg-[#13a8a2] hover:bg-[#0f948f] text-white font-semibold text-sm tracking-wide font-body shadow-[0_4px_18px_rgba(19,168,162,0.3)] hover:shadow-[0_6px_24px_rgba(19,168,162,0.45)] cursor-pointer border-none flex items-center justify-center"
             >
               <span className="flex items-center gap-2">
                 <span>Request a consultation</span>

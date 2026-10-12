@@ -57,7 +57,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             Led by medical expertise, Amriza bridges global boundaries to connect international patients with world-class, multi-specialty clinical care — a seamless journey from initial consultation to complete recovery.
           </p>
 
-          {/* CTA Buttons with Matching Height */}
+          {/* CTA Buttons with Matching Height & Length */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 w-full sm:w-auto font-body mb-8 sm:mb-10">
             {/* Primary Liquid Glass Button */}
             <LiquidButton
@@ -67,7 +67,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 onOpenConsultation();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="w-full sm:w-auto px-7 h-[50px] rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold text-sm tracking-wide font-body shadow-[0_4px_20px_rgba(20,184,166,0.35)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.5)] transition-all duration-200 active:scale-95 flex items-center justify-center gap-2 cursor-pointer border-none shrink-0"
+              className="w-full sm:w-[215px] h-[50px] px-7 rounded-full bg-[#14b8a6] hover:bg-[#0d9488] text-white font-semibold text-sm tracking-wide font-body shadow-[0_4px_20px_rgba(20,184,166,0.35)] hover:shadow-[0_6px_26px_rgba(20,184,166,0.5)] transition-all duration-200 active:scale-95 flex items-center justify-center gap-2 cursor-pointer border-none shrink-0"
             >
               <span className="flex items-center justify-center gap-2">
                 <span>Start Your Journey</span>
@@ -84,7 +84,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 else onExploreJourney();
               }}
               onMouseEnter={() => soundFX.playGlassHover()}
-              className="w-full sm:w-auto px-7 h-[50px] rounded-full bg-white/90 hover:bg-white border border-slate-200/80 text-slate-800 text-sm font-semibold tracking-wide font-body transition-all duration-200 flex items-center justify-center cursor-pointer shadow-xs active:scale-95 shrink-0"
+              className="w-full sm:w-[215px] h-[50px] px-7 rounded-full bg-white/90 hover:bg-white border border-slate-200/80 text-slate-800 text-sm font-semibold tracking-wide font-body transition-all duration-200 flex items-center justify-center cursor-pointer shadow-xs active:scale-95 shrink-0"
             >
               <span>Explore Specialties</span>
             </button>
@@ -139,9 +139,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="relative rounded-[26px] sm:rounded-[38px] overflow-hidden aspect-[4/5] bg-slate-100 flex items-center justify-center">
               {/* Doctor Image */}
               <img
-                src="/dr-mussadiq.jpg"
+                src="/dr-mussadiq-v2.jpg"
                 alt="Dr. Mussadiq Ahmed, MD"
-                className="w-full h-full object-cover object-center transform hover:scale-[1.02] transition-transform duration-500"
+                className="w-full h-full object-cover object-[center_15%] transform hover:scale-[1.02] transition-transform duration-500"
                 loading="eager"
               />
 
