@@ -40,9 +40,9 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenConsultation }
           {/* Circular Doctor Portrait */}
           <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden shrink-0 shadow-md border-4 border-white bg-slate-100 flex items-center justify-center">
             <img
-              src="/dr-mussadiq.jpg"
+              src="/dr-mussadiq-leadership.jpg"
               alt="Dr. Mussadiq Ahmed, MD - CEO of Amriza Health Tourism"
-              className="w-full h-full object-cover object-center transform scale-110"
+              className="w-full h-full object-cover object-[center_15%]"
             />
           </div>
 
