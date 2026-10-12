@@ -2,6 +2,7 @@ import React from 'react';
 import { PhoneCall, Globe, Mail, Stethoscope, ArrowUp, ArrowUpRight } from 'lucide-react';
 import { soundFX } from '../utils/sound';
 import { LiquidButton } from '@/components/ui/liquid-glass-button';
+import logoImg from '@/assets/amriza-logo.png';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -27,7 +28,7 @@ export const Footer: React.FC = () => {
             >
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center p-1 shadow-2xs group-hover:scale-105 transition-transform">
                 <img
-                  src="/amriza-logo.png"
+                  src={logoImg}
                   alt="Amriza Health Tourism Logo"
                   className="w-full h-full object-contain"
                 />

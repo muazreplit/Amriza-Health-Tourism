@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall, Sparkles } from 'lucide-react';
 import { soundFX } from '../utils/sound';
 import { LiquidButton } from '@/components/ui/liquid-glass-button';
+import logoImg from '@/assets/amriza-logo.png';
 
 interface NavbarProps {
   onOpenConsultation: () => void;
@@ -70,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
           >
             <div className="relative w-10 h-10 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center p-1 backdrop-blur-md group-hover:border-[#1dbcb5] transition-colors shadow-xs">
               <img
-                src="/amriza-logo.png"
+                src={logoImg}
                 alt="Amriza Health Tourism Logo"
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform"
               />
